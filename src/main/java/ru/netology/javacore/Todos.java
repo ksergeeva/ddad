@@ -7,6 +7,7 @@ public class Todos {
 
 
     private List<String> todos;
+    protected int i = 7;
 
     public Todos() {
 
@@ -14,21 +15,18 @@ public class Todos {
     }
 
     public void addTask(String task) {
-        if (todos.size() < 7) ;
-        todos.add(task);
-
-    }
-
-    public void removeTask(String task) {
-        if (todos.contains(task)) {
-            todos.remove(task);
+        if (todos.size() < i) {
+            todos.add(task);
         }
     }
 
+    public void removeTask(String task) {
+        todos.remove(task);
+
+    }
+
     public String getAllTasks() {
-
         todos.sort(String::compareTo);
-
         StringBuilder buld = new StringBuilder();
         for (String todo : todos) {
             buld.append(todo);
