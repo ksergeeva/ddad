@@ -35,7 +35,7 @@ public class TodoServer {
 
                     switch (task2.type) {
                         case "ADD" : todos.addTask(task2.task);
-break;
+                        break;
                         case "REMOVE" : todos.removeTask(task2.task);
                         break;
 
