@@ -34,8 +34,11 @@ public class TodoServer {
                     Task task2 = gson.fromJson(jsonT, Task.class);
 
                     switch (task2.type) {
-                        case "ADD" -> todos.addTask(task2.task);
-                        case "REMOVE" -> todos.removeTask(task2.task);
+                        case "ADD" : todos.addTask(task2.task);
+break;
+                        case "REMOVE" : todos.removeTask(task2.task);
+                        break;
+
                     }
 
                     out.println(todos.getAllTasks());
